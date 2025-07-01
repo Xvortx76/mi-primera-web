@@ -23,4 +23,23 @@ let clics = 0
 function incrementarContador() {
     clics++;
     document.getElementById("contador").textContent = `has hecho clic ${clics} veces.`;
+    
 }
+
+
+function saludar() {
+  let nombre = document.getElementById("nombreInput").value;
+  let edad = parseInt(document.getElementById("edadInput").value);
+
+  let mensaje = "";
+
+  if (nombre === "" || isNaN(edad)) {
+    mensaje = "Por favor, completa ambos campos.";
+  } else {
+    mensaje = `Hola ${nombre}, `;
+    mensaje += (edad >= 18) ? "eres mayor de edad." : "eres menor de edad.";
+  }
+
+  document.getElementById("mensaje").textContent = mensaje;
+}
+
